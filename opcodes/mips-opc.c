@@ -733,8 +733,8 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"bc1tl",		"N,p",		0x45030000, 0xffe30000, RD_CC|CBL|FP_S, 	0,		I4_32,		0,	I37 },
 /* bc2* are at the bottom of the table.  */
 /* bc3* are at the bottom of the table.  */
-{"beqz",		"s,p",		0x10000000, 0xfc1f0000,	RD_1|CBD,		0,		I1,		0,	0 },
-{"beqzl",		"s,p",		0x50000000, 0xfc1f0000,	RD_1|CBL,		0,		I2|T3,		0,	I37 },
+{"beqz",		"s,p",		0x10000000, 0xfc1f0000,	RD_1|CBD,		INSN2_ALIAS,	I1,		0,	0 },
+{"beqzl",		"s,p",		0x50000000, 0xfc1f0000,	RD_1|CBL,		INSN2_ALIAS,	I2|T3,		0,	I37 },
 {"beq",			"s,t,p",	0x10000000, 0xfc000000,	RD_1|RD_2|CBD,		0,		I1,		0,	0 },
 {"beq",			"s,I,p",	0,    (int) M_BEQ_I,	INSN_MACRO,		0,		I1,		0,	0 },
 {"beql",		"s,t,p",	0x50000000, 0xfc000000,	RD_1|RD_2|CBL,		0,		I2|T3,		0,	I37 },
@@ -784,8 +784,8 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"bltzal",		"s,p",		0x04100000, 0xfc1f0000,	RD_1|WR_31|CBD,		0,		I1,		0,	I37 },
 {"nal",			"",		0x04100000, 0xffffffff,	WR_31|CBD,		0,		I1,		0,	0 }, /* bltzal 0,.+4 */
 {"bltzall",		"s,p",		0x04120000, 0xfc1f0000,	RD_1|WR_31|CBL,		0,		I2|T3,		0,	I37 },
-{"bnez",		"s,p",		0x14000000, 0xfc1f0000,	RD_1|CBD,		0,		I1,		0,	0 },
-{"bnezl",		"s,p",		0x54000000, 0xfc1f0000,	RD_1|CBL,		0,		I2|T3,		0,	I37 },
+{"bnez",		"s,p",		0x14000000, 0xfc1f0000,	RD_1|CBD,		INSN2_ALIAS,	I1,		0,	0 },
+{"bnezl",		"s,p",		0x54000000, 0xfc1f0000,	RD_1|CBL,		INSN2_ALIAS,	I2|T3,		0,	I37 },
 {"bne",			"s,t,p",	0x14000000, 0xfc000000,	RD_1|RD_2|CBD,		0,		I1,		0,	0 },
 {"bne",			"s,I,p",	0,    (int) M_BNE_I,	INSN_MACRO,		0,		I1,		0,	0 },
 {"bnel",		"s,t,p",	0x54000000, 0xfc000000,	RD_1|RD_2|CBL, 		0,		I2|T3,		0,	I37 },
