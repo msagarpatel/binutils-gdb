@@ -914,8 +914,8 @@ const struct mips_opcode micromips_opcodes[] =
 {"mult",		"7,s,t",	0x00000cbc, 0xfc003fff,	RD_2|RD_3|WR_a,		0,		0,		D32,	0 },
 {"multu",		"s,t",		0x00009b3c, 0xfc00ffff,	RD_1|RD_2|WR_HILO,	0,		I1,		0,	0 },
 {"multu",		"7,s,t",	0x00001cbc, 0xfc003fff,	RD_2|RD_3|WR_a,		0,		0,		D32,	0 },
-{"neg",			"d,w",		0x00000190, 0xfc1f07ff,	WR_1|RD_2,		0,		I1,		0,	0 }, /* sub 0 */
-{"negu",		"d,w",		0x000001d0, 0xfc1f07ff,	WR_1|RD_2,		0,		I1,		0,	0 }, /* subu 0 */
+{"neg",			"d,w",		0x00000190, 0xfc1f07ff,	WR_1|RD_2,		INSN2_ALIAS,		I1,		0,	0 }, /* sub 0 */
+{"negu",		"d,w",		0x000001d0, 0xfc1f07ff,	WR_1|RD_2,		INSN2_ALIAS,		I1,		0,	0 }, /* subu 0 */
 {"neg.d",		"T,V",		0x54002b7b, 0xfc00ffff,	WR_1|RD_2|FP_D,		0,		I1,		0,	0 },
 {"neg.s",		"T,V",		0x54000b7b, 0xfc00ffff,	WR_1|RD_2|FP_S,		0,		I1,		0,	0 },
 {"neg.ps",		"T,V",		0x54004b7b, 0xfc00ffff,	WR_1|RD_2|FP_D,		0,		I1,		0,	0 },

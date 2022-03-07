@@ -1620,8 +1620,8 @@ const struct mips_opcode mips_builtin_opcodes[] =
 {"multu1",		"d,s,t",	0x70000019, 0xfc0007ff, WR_1|RD_2|RD_3|WR_HILO|IS_M, 0,		EE,		0,	0 },
 {"mulu",		"d,v,t",	0x00000099, 0xfc0007ff, WR_1|RD_2|RD_3, 	0,		I37,		0,	0},
 {"mulu",		"d,s,t",	0x00000059, 0xfc0007ff,	WR_1|RD_2|RD_3|WR_HILO,	0,		N5,		0,	0 },
-{"neg",			"d,w",		0x00000022, 0xffe007ff,	WR_1|RD_2,		0,		I1,		0,	0 }, /* sub 0 */
-{"negu",		"d,w",		0x00000023, 0xffe007ff,	WR_1|RD_2,		0,		I1,		0,	0 }, /* subu 0 */
+{"neg",			"d,w",		0x00000022, 0xffe007ff,	WR_1|RD_2,		INSN2_ALIAS,		I1,		0,	0 }, /* sub 0 */
+{"negu",		"d,w",		0x00000023, 0xffe007ff,	WR_1|RD_2,		INSN2_ALIAS,		I1,		0,	0 }, /* subu 0 */
 {"neg.d",		"D,V",		0x46200007, 0xffff003f,	WR_1|RD_2|FP_D,		0,		I1,		0,	SF },
 {"neg.s",		"D,V",		0x46000007, 0xffff003f,	WR_1|RD_2|FP_S,		0,		I1,		0,	0 },
 {"neg.ps",		"D,V",		0x46c00007, 0xffff003f,	WR_1|RD_2|FP_D,		0,		I5_33|IL2F,	0,	I37 },
